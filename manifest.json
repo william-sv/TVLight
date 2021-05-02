@@ -1,0 +1,32 @@
+{
+    "manifest_version": 2,
+    "name": "TVLight",
+    "short_name": "TVLight",
+    "version": "1.0.0",
+    "description": "TVLight 电视剧、电影追踪",
+    "icons": {
+      "128": "img/icon.png"
+    },
+    "browser_action": {
+      "default_icon": "img/icon.png",
+      "default_title": "TVLight"
+    },
+    "permissions": [
+      "tabs",
+      "storage",
+      "http://*/",
+      "https://*/"
+    ],
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+    "web_accessible_resources": ["*"],
+    "chrome_url_overrides": {
+      "newtab": "main.html"
+    },
+    "background": {
+      "persistent": true,
+      "scripts": ["background.js"]
+    },
+
+    "offline_enabled": true
+
+  }
